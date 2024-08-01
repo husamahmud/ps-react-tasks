@@ -27,16 +27,48 @@ header {
 
 nav {
 	background-color: coral;
+  height: 50vh;
+  width: 20vw
 }
 
 main {
 	background-color: moccasin;
+ width: 60vw;
 }
 
 aside {
 	background-color: sandybrown;
+  width: 20vw
 }
 
 footer {
 	background-color: slategray;
+}
+.app {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'left left middle middle right right' 
+    'footer footer footer footer footer footer';
+    
+}
+.header {
+  grid-area: header;
+  height: 25vh;
+  text-align: center;
+  font-size: 35px;
+}
+nav .left {
+  grid-area: left;
+}
+aside .right {
+  grid-area: right;
+}
+main .center {
+  grid-area: middle;
+}
+.footer{
+grid-area: footer;
+height: 25vh;
+text-align: center;
 }

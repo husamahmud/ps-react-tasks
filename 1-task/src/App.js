@@ -1,13 +1,13 @@
 export default function App() {
   return (
-    <>
-      <header>Header</header>
-      <div>
-        <nav>Navigation</nav>
-        <main>Main</main>
-        <aside>Sidebar</aside>
-      </div>
-      <footer>Footer</footer>
-    </>
+    <div className="app">
+      <header className="header">Header</header>
+    
+        <nav className="left">Navigation</nav>
+        <main className="center">Main</main>
+        <aside className="right">Sidebar</aside>
+    
+      <footer className="footer">Footer</footer>
+    </div>
   )
 }
