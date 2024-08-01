@@ -1,6 +1,6 @@
 export default function App() {
   return (
-    <>
+    <section>
       <header>Header</header>
       <div>
         <nav>Navigation</nav>
@@ -8,6 +8,6 @@ export default function App() {
         <aside>Sidebar</aside>
       </div>
       <footer>Footer</footer>
-    </>
+    </section>
   )
 }

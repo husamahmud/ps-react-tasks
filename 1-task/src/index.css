@@ -1,42 +1,61 @@
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-	'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-	sans-serif;
-	font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    font-weight: 500;
 }
 
+
 /* Edit the styles below to complete the task */
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-weight: bold;
+}
 
 header,
 nav,
 main,
 aside,
 footer {
-	padding: 12px;
+    padding: 12px;
 }
 
 header {
-	background-color: tomato;
+    background-color: tomato;
+    height: 60px;
 }
 
-nav {
-	background-color: coral;
+header+div {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+nav,aside {
+    background-color: coral;
+    width: 100px;
 }
 
 main {
-	background-color: moccasin;
+    background-color: moccasin;
+    flex: 1;
 }
 
 aside {
-	background-color: sandybrown;
+    background-color: sandybrown;
 }
 
 footer {
-	background-color: slategray;
+    background-color: slategray;
+    height: 100px;
 }
