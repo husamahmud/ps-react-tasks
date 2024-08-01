@@ -2,12 +2,12 @@ export default function App() {
   return (
     <>
       <header>Header</header>
-      <div>
+      <div className="wrapper">
         <nav>Navigation</nav>
         <main>Main</main>
         <aside>Sidebar</aside>
       </div>
       <footer>Footer</footer>
     </>
-  )
+  );
 }
