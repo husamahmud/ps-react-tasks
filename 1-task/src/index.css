@@ -1,42 +1,14 @@
-* {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-}
-
+* {box-sizing: border-box;padding: 0;margin: 0;}
 body {
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-	'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-	sans-serif;
-	font-weight: 500;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;font-weight: 500;
 }
-
-/* Edit the styles below to complete the task */
-
-header,
-nav,
-main,
-aside,
-footer {
-	padding: 12px;
-}
-
-header {
-	background-color: tomato;
-}
-
-nav {
-	background-color: coral;
-}
-
-main {
-	background-color: moccasin;
-}
-
-aside {
-	background-color: sandybrown;
-}
-
-footer {
-	background-color: slategray;
-}
+aside,footer,header,main,nav {padding: 12px;text-align: center;}
+header {background-color: tomato;height: 10vh;}
+.container {display: flex;min-height: calc(100vh - (10vh + 100px));}
+aside,nav {width: 100px;}
+nav {background-color: coral;}
+main {background-color: #ffe4b5;flex-grow: 1;}
+aside {background-color: #f4a460;}
+footer {background-color: #708090;height: 100px;}
+@media (max-width: 768px) {.container {flex-direction: column;}aside,nav {width: 100%;}}
