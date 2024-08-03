@@ -1,11 +1,16 @@
 ### Task 1: [Implement Holy Grail layout using CSS](1-task%2FREADME.md)
 
+### Task2: [Implement Mortage Calculator using React](2-task%2FREADME.md)
+
 ### How to submit your solution?
 
-1. Fork this repository
-2. Create a new branch with the name of the task followed by your name (
-   e.g. `task-1-husam`)
-3. Commit your changes
+1. Clone this repository
+2. Create a new branch with the name of the task followed by your
+   name (`task-1-husam`)
+3. Create a new directory with the name of the task followed by your name,
+   inside the task directory (`1-task/husam`)
+4. Add your solution to the directory
+5. Commit your changes
     - the commit messages should be descriptive
     - the commit message should be in this format:
         - `<type>: <description>`
@@ -28,5 +33,8 @@
             - `style: change the color of a button`
             - `test: add a new test`
             - `chore: add a new dependency`
-4. Push your changes to your forked repository
-5. Create a pull request to this repository
+6. Push your changes to this repository
+7. Create a pull request to this repository
+    - the title of the pull request should be in this format:
+        - `[Task 1]: Implement Holy Grail layout using CSS`
+        - `[Task 2]: Implement Mortage Calculator using React`
