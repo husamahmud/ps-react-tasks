@@ -24,7 +24,7 @@ h1 {
 
 .content {
     min-width: 300px;
-width: 80%;
+    width: 80%;
     margin: 0 auto;
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
@@ -86,6 +86,7 @@ button {
     font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-weight: bold;
 }
 
 button:hover {
@@ -142,8 +143,9 @@ article p {
     font-weight: bold;
     min-width: 100px;
     width: fit-content;
+    transition: .3s linear;
     opacity: 0;
-    height: 0;
+
 }
 
 .mainResultBox {

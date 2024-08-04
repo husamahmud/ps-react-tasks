@@ -217,11 +217,7 @@ function MortgageCalculator(): JSX.Element {
               <div className={styles.boxResult}>
                 <h2>Monthly Payment: </h2>
                 {mortgageResult && (
-                  <p
-                    style={
-                      isHidden ? { opacity: 0 } : { opacity: 1, height: "auto" }
-                    }
-                  >
+                  <p style={isHidden ? { opacity: 0 } : { opacity: 1 }}>
                     {mortgageResult.monthlyPayment.toFixed(2)}
                   </p>
                 )}
@@ -230,11 +226,7 @@ function MortgageCalculator(): JSX.Element {
               <div className={styles.boxResult}>
                 <h2>Total Amount Paid: </h2>
                 {mortgageResult && (
-                  <p
-                    style={
-                      isHidden ? { opacity: 0 } : { opacity: 1, height: "auto" }
-                    }
-                  >
+                  <p style={isHidden ? { opacity: 0 } : { opacity: 1 }}>
                     {mortgageResult.totalAmountPaid.toFixed(2)}
                   </p>
                 )}
@@ -242,11 +234,7 @@ function MortgageCalculator(): JSX.Element {
               <div className={styles.boxResult}>
                 <h2>Total Benefits: </h2>
                 {mortgageResult && (
-                  <p
-                    style={
-                      isHidden ? { opacity: 0 } : { opacity: 1, height: "auto" }
-                    }
-                  >
+                  <p style={isHidden ? { opacity: 0 } : { opacity: 1 }}>
                     {mortgageResult.totalBenefits.toFixed(2)}
                   </p>
                 )}
