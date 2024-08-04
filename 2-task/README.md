@@ -1,50 +1,30 @@
-## Task 2: Implement Mortage Calculator using React
+# React + TypeScript + Vite
 
-### Description
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Build a simple mortgage calculator widget that takes in a loan amount, interest
-rate, loan term, and calculates the monthly mortgage payment, total payment
-amount, and total interest paid.
+Currently, two official plugins are available:
 
-### Requirements
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- The user should be able to enter:
-    - Loan amount ($)
-    - Annual interest rate (%). This is also known as the annual percentage
-      rate (APR)
-    - Loan term (in years)
-- Using the inputs, the calculator should compute the following and display the
-  results to the user:
-    - Monthly mortgage payment
-    - Total payment amount
-    - Total interest paid
+## Expanding the ESLint configuration
 
-- If a non-numerical string is entered into any input field, the calculator
-  should display an error message. Additionally, the calculator should handle
-  any other invalid inputs that may arise.
-- Round the result amounts to 2 decimal places.
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Formula to calculate the monthly mortgage payment:
-  ```
-  M = P[r(1+r)^n]/[(1+r)^n - 1]
-  ```
-  Where:
-    - M = Monthly mortgage payment
-    - P = Loan amount
-    - r = Monthly interest rate (annual interest rate / 12)
-    - n = Loan term in months
+- Configure the top-level `parserOptions` property like this:
 
-### Example
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
 
-- Here's an example of Google's mortgage calculator widget for reference:
-
-![img-1.png](../assets/img-1.png)
-
-### How to submit your solution?
-
-1. Create a new directory with the name of the task followed by your name,
-   inside the task directory (`/1-task/husam`)
-
-2. Create your own React app using `create-react-app` or  `vite` or any other
-   tool you prefer.
-3. Use any CSS framework you like or write your own CSS.
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list

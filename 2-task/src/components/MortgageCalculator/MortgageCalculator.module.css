@@ -1,0 +1,158 @@
+/* MortgageCalculator.module.css */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    background: linear-gradient(135deg, #192939, #040511);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+    width: 100%;
+
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+.content {
+    min-width: 300px;
+width: 80%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(28, 27, 29, 0.664);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+form {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+fieldset {
+    margin-bottom: 15px;
+    border: none;
+    padding: 0;
+    flex-grow: 1;
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    color: #3b82f6;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #d1d5db;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #374151;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+.result {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.result>h2 {
+    font-size: 1.5rem;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+article h2 {
+    color: #4d69a8;
+}
+
+
+.error {
+    color: #ef4444;
+    font-size: 0.9rem;
+    margin-top: 7px;
+}
+
+.boxResult {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #2563eb;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+
+article p {
+    background-color: #2563eb;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    min-width: 100px;
+    width: fit-content;
+    opacity: 0;
+    height: 0;
+}
+
+.mainResultBox {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #1f2937;
+    padding: 10px;
+    border-radius: 4px;
+
+}
