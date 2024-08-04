@@ -88,23 +88,28 @@ function MortgageCalculator(): JSX.Element {
     e.preventDefault();
     setOpacity("visible");
     let formErrors = { ...errors };
+
     if (principalAmount < 2000 || !isFinite(principalAmount)) {
-      formErrors.principalAmount =
-        "Please enter a valid loan amount at least 2000";
+      formErrors.principalAmount = "The loan amount must be at least $2,000.";
     }
+
     if (annualInterestRate <= 0 || annualInterestRate > 100) {
-      formErrors.annualInterestRate = "Please enter a valid interest rate.";
+      formErrors.annualInterestRate =
+        "The annual interest rate must be between 0% and 100%.";
     }
+
     if (loanTermYears <= 0 || loanTermYears > 30) {
-      formErrors.loanTermYears = "Please enter a valid loan term.";
+      formErrors.loanTermYears =
+        "The loan term must be between 1 and 30 years.";
     }
+
     if (
       formErrors.annualInterestRate ||
       formErrors.loanTermYears ||
       formErrors.principalAmount
     ) {
       setErrors(formErrors);
-      return;
+      return; // Stop calculation if there are errors
     }
 
     // p = loan amount
