@@ -17,7 +17,7 @@ function App() {
   const [submitDisabled, setSubmitDisabled] = useState<boolean>(true);
 
   function checkNonNumericValid(value: any) {
-    let number = parseInt(value);
+    let number = Number(value);
     return new Promise((resolve, reject) => {
       if (value === "") {
         reject("This Field Is Required");
