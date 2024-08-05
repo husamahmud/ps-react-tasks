@@ -1,0 +1,24 @@
+.body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator__container {
+  padding: 1rem;
+
+  width: 50%;
+  height: 50%;
+  border: 2px solid red;
+}
+
+.calculator__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab_link {
+  padding: 0.25rem 2rem;
+}
