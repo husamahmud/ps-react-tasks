@@ -8,9 +8,7 @@
 
 .calculator__container {
   padding: 1rem;
-
   width: 50%;
-  height: 50%;
   border: 2px solid red;
 }
 
@@ -20,5 +18,16 @@
 }
 
 .tab_link {
-  padding: 0.25rem 2rem;
+  padding: 0.35rem 2rem;
+  width: 100%;
+}
+
+.tabs__links {
+  font-size: small;
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgba(227, 227, 227, 0.304);
 }
