@@ -9,6 +9,20 @@ body,
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* reset */
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
