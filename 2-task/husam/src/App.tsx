@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import InputContainer from "./components/bits/Input";
 import Label from "./components/bits/Label";
-import styles from "./styles.module.css";
+import Separator from "./components/bits/Separator";
 
 function App() {
   const [userLoanInput, setUserLoanInput] = useState({
@@ -44,29 +44,24 @@ function App() {
   };
 
   return (
-    <section id="body" className={styles.body}>
-      <div className={styles.calculator__container}>
+    <section
+      id="body"
+      className="w-full h-[100vh] flex items-center justify-center"
+    >
+      <div className="w-1/2">
         <h1>Calulator</h1>
-        <div className={styles.calculator__body}>
+        <div className="flex">
           <div className="left flex-1">
-            <div className={styles.tabs__links}>
+            <div className="text-sm flex items-center border rounded-md border-gray-300">
               <button
-                className={styles.tab_link}
+                className="px-8 py-3 w-full"
                 // active state
                 role="tablist"
               >
                 Monthly Payment
               </button>
-              <div
-                className="separator"
-                style={{
-                  padding: "0.75rem 0",
-                  width: "1px",
-                  backgroundColor: "gray",
-                  display: "block",
-                }}
-              ></div>
-              <button className={styles.tab_link} role="tablist">
+              <Separator />
+              <button className="px-8 py-3 w-full" role="tablist">
                 Purshace Budget
               </button>
             </div>
@@ -89,7 +84,6 @@ function App() {
                 </InputContainer>
               </div>
               <div className="term_interest flex gap-6  items-center mt-4">
-                {/* WHAT THE FUCK IS THIS BEHAVIOR ???????????????????? */}
                 <InputContainer
                   value={userLoanInput.LoanTerm}
                   type="number"
@@ -123,16 +117,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div
-            className="separator"
-            style={{
-              padding: "0.75rem 0",
-              width: "1px",
-              backgroundColor: "gray",
-              display: "block",
-              margin: "0 1rem",
-            }}
-          ></div>
+          <Separator className="mx-4" />
           <div className="right flex-1">
             {calculationResult ? (
               <>

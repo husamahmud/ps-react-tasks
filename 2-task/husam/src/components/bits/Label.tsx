@@ -1,4 +1,4 @@
-import React, { DetailedHTMLProps, LabelHTMLAttributes } from "react";
+import { DetailedHTMLProps, LabelHTMLAttributes } from "react";
 
 interface LabelProps
   extends DetailedHTMLProps<
