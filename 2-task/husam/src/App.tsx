@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import InputContainer from "./components/bits/Input";
 import Label from "./components/bits/Label";
 import Separator from "./components/bits/Separator";
+import { Tab, Tabs } from "./components/bits/Tabs";
 
 function App() {
   const [userLoanInput, setUserLoanInput] = useState({
@@ -52,70 +53,67 @@ function App() {
         <h1>Calulator</h1>
         <div className="flex">
           <div className="left flex-1">
-            <div className="text-sm flex items-center border rounded-md border-gray-300">
-              <button
-                className="px-8 py-3 w-full"
-                // active state
-                role="tablist"
+            <Tabs bodyClassName="text-sm">
+              <Tab
+                tabKey={Math.round(Math.random() * 10000)}
+                title="Monthly Payment"
               >
-                Monthly Payment
-              </button>
-              <Separator />
-              <button className="px-8 py-3 w-full" role="tablist">
-                Purshace Budget
-              </button>
-            </div>
-            {/* TODO: implement tab feature */}
-            <div className="tab__body text-sm">
-              <div className="loan_amount mt-4">
-                <InputContainer
-                  value={userLoanInput.loanAmount}
-                  onChange={(e) => {
-                    setUserLoanInput((prev) => {
-                      return { ...prev, loanAmount: Number(e.target.value) };
-                    });
-                  }}
-                  placeholder="Loan Amount"
-                  className="w-full"
-                  type="number"
-                  id="loan_amount"
-                >
-                  <Label>Loan Amount</Label>
-                </InputContainer>
-              </div>
-              <div className="term_interest flex gap-6  items-center mt-4">
-                <InputContainer
-                  value={userLoanInput.LoanTerm}
-                  type="number"
-                  id="loan_term"
-                  containerClassName="flex-1"
-                  className="w-full"
-                  placeholder="Loan Term"
-                  prefix=""
-                  onChange={(e) => {
-                    setUserLoanInput((prev) => {
-                      return { ...prev, LoanTerm: Number(e.target.value) };
-                    });
-                  }}
-                >
-                  <Label>Loan Term</Label>
-                </InputContainer>
-                <InputContainer
-                  value={userLoanInput.Interest}
-                  className="max-w-28"
-                  type="number"
-                  id="loan_interest"
-                  prefix="%"
-                  onChange={(e) => {
-                    setUserLoanInput((prev) => {
-                      return { ...prev, Interest: Number(e.target.value) };
-                    });
-                  }}
-                >
-                  <Label>Interest</Label>
-                </InputContainer>
-              </div>
-            </div>
+                <div className="loan_amount mt-4">
+                  <InputContainer
+                    value={userLoanInput.loanAmount}
+                    onChange={(e) => {
+                      setUserLoanInput((prev) => {
+                        return { ...prev, loanAmount: Number(e.target.value) };
+                      });
+                    }}
+                    placeholder="Loan Amount"
+                    className="w-full"
+                    type="number"
+                    id="loan_amount"
+                  >
+                    <Label>Loan Amount</Label>
+                  </InputContainer>
+                </div>
+                <div className="term_interest flex gap-6  items-center mt-4">
+                  <InputContainer
+                    value={userLoanInput.LoanTerm}
+                    type="number"
+                    id="loan_term"
+                    containerClassName="flex-1"
+                    className="w-full"
+                    placeholder="Loan Term"
+                    prefix=""
+                    onChange={(e) => {
+                      setUserLoanInput((prev) => {
+                        return { ...prev, LoanTerm: Number(e.target.value) };
+                      });
+                    }}
+                  >
+                    <Label>Loan Term</Label>
+                  </InputContainer>
+                  <InputContainer
+                    value={userLoanInput.Interest}
+                    className="max-w-28"
+                    type="number"
+                    id="loan_interest"
+                    prefix="%"
+                    onChange={(e) => {
+                      setUserLoanInput((prev) => {
+                        return { ...prev, Interest: Number(e.target.value) };
+                      });
+                    }}
+                  >
+                    <Label>Interest</Label>
+                  </InputContainer>
+                </div>
+              </Tab>
+              <Tab
+                tabKey={Math.round(Math.random() * 10000)}
+                title="Purshace Budget"
+              >
+                Another content
+              </Tab>
+            </Tabs>
           </div>
           <Separator className="mx-4" />
           <div className="right flex-1">
