@@ -1,10 +1,11 @@
+import MortageCalc from "./components/MortageCalc";
 
 
 function App() {
 
   return (
     <>
-      <h1>starting the mortage calculator</h1>
+      <MortageCalc />
     </>
   )
 }
