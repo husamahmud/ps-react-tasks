@@ -1,50 +1,70 @@
-## Task 2: Implement Mortage Calculator using React
+# Getting Started with Create React App
 
-### Description
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Build a simple mortgage calculator widget that takes in a loan amount, interest
-rate, loan term, and calculates the monthly mortgage payment, total payment
-amount, and total interest paid.
+## Available Scripts
 
-### Requirements
+In the project directory, you can run:
 
-- The user should be able to enter:
-    - Loan amount ($)
-    - Annual interest rate (%). This is also known as the annual percentage
-      rate (APR)
-    - Loan term (in years)
-- Using the inputs, the calculator should compute the following and display the
-  results to the user:
-    - Monthly mortgage payment
-    - Total payment amount
-    - Total interest paid
+### `npm start`
 
-- If a non-numerical string is entered into any input field, the calculator
-  should display an error message. Additionally, the calculator should handle
-  any other invalid inputs that may arise.
-- Round the result amounts to 2 decimal places.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- Formula to calculate the monthly mortgage payment:
-  ```
-  M = P[r(1+r)^n]/[(1+r)^n - 1]
-  ```
-  Where:
-    - M = Monthly mortgage payment
-    - P = Loan amount
-    - r = Monthly interest rate (annual interest rate / 12)
-    - n = Loan term in months
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### Example
+### `npm test`
 
-- Here's an example of Google's mortgage calculator widget for reference:
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-![img-1.png](../assets/img-1.png)
+### `npm run build`
 
-### How to submit your solution?
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-1. Create a new directory with the name of the task followed by your name,
-   inside the task directory (`/1-task/husam`)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-2. Create your own React app using `create-react-app` or  `vite` or any other
-   tool you prefer.
-3. Use any CSS framework you like or write your own CSS.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
