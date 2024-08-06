@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .span {
+    @apply font-semibold text-stone-800 dark:text-white capitalize;
+  }
+
+  .deco {
+    @apply underline underline-offset-4 decoration-2 decoration-green-400;
+  }
+
+  .span-container {
+    @apply w-11/12  flex justify-between;
+  }
+}
