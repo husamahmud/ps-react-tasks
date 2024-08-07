@@ -2,16 +2,6 @@
 
 ### Task2: [Implement Mortage Calculator using React](2-task%2FREADME.md)
 
-### Task 2 Overview: 
-
-![image](https://github.com/user-attachments/assets/afd296d7-70f3-49ba-8f07-4b090a4bc8c1)
-
-![image](https://github.com/user-attachments/assets/ba5d0a99-e075-4667-9159-1daedebd7dac)
-
-![image](https://github.com/user-attachments/assets/62a53255-bdfc-4652-915c-00587c8dba48)
-
-
-
 
 ### How to submit your solution?
 
