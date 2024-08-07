@@ -1,0 +1,101 @@
+:root {
+  --primary-color: #6200ea;
+  --secondary-color: #03dac6;
+  --text-color: #333;
+  --light-text-color: #555;
+  --background-color: #f0f4f8;
+  --input-border-color: #ddd;
+  --button-hover-color: #3700b3;
+  --result-background-color: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+}
+
+.mortgage-calculator {
+  font-family: "Arial", sans-serif;
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--background-color), #e1e7ed);
+  border: 1px solid var(--input-border-color);
+}
+
+.mortgage-calculator__title {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.mortgage-calculator__input-group {
+  margin-bottom: 20px;
+}
+
+.mortgage-calculator__label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--light-text-color);
+  font-weight: 500;
+}
+
+.mortgage-calculator__input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--input-border-color);
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.mortgage-calculator__input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.mortgage-calculator__button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--button-hover-color)
+  );
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.mortgage-calculator__button:hover {
+  background: linear-gradient(
+    135deg,
+    var(--button-hover-color),
+    var(--primary-color)
+  );
+  transform: translateY(-2px);
+}
+
+.mortgage-calculator__result {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-color);
+  padding: 10px;
+  border-radius: 6px;
+  background-color: var(--result-background-color);
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
