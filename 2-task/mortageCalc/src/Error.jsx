@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 function Error({ error }) {
   return (
-    <div className=" w-1/2 space-y-5 py-3 px-4 pl-10 flex justify-center items-center">
-      <p className="text-red-700 bg-red-300 p-2 rounded-md">{error}</p>
+    <div className="font-semibold leading-8 tracking-wider">
+      <p className="bg-red-400 p-2 rounded-md sm:mt-12">{error}</p>
     </div>
   );
 }

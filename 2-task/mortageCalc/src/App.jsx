@@ -7,22 +7,7 @@ import Results from './Results';
 import Background from './Background';
 import Label from './Label';
 import Button from './Button';
-
-/*
-M = P[r(1+r)^n]/[(1+r)^n - 1]
-Where:
-
-M = Monthly mortgage payment
-P = Loan amount
-r = Monthly interest rate (annual interest rate / 12)
-n = Loan term in months
-*/
-
-function numberWithCommas(x) {
-  let parts = x.toString().split('.');
-  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  return parts.join('.');
-}
+import { numberWithCommas } from './utils';
 
 export default function App() {
   const [loan, setLoan] = useState('');
@@ -74,30 +59,33 @@ export default function App() {
   };
 
   return (
-    <div className="dark:bg-slate-800 dark:text-white text-black flex items-center justify-center bg-slate-400 w-full h-screen">
-      <div className="border-solid border-stone-500 border-2 w-6/12 h-2/3 overflow-hidden">
+    <div className="flex justify-center h-screen">
+      <div className=" w-11/12 sm:w-3/6 sm:mt-14">
         <Header />
 
-        <div className="px-4 py-8 flex gap-3 h-3/5 divide-x-2 divide-green-400 outline-1">
-          <div className="  w-1/2 flex justify-center">
+        <div className="flex flex-col sm:flex-row divide-x-2 divide-solid divide-green-500">
+          <div className="sm:basis-1/2 flex flex-col sm:flex-row p-4 justify-center items-center">
             <form
-              className="space-y-3 text-center"
+              className="flex flex-col gap-3  w-3/4"
               onSubmit={(e) => handleSubmit(e)}
             >
               <Label
                 placeholder="Loan Amount"
                 inputVal={loan}
                 setInputVal={setLoan}
+                icon="$"
               />
               <Label
                 placeholder="Annual Interest Rate"
                 inputVal={annualRate}
                 setInputVal={setAnnualRate}
+                icon="%"
               />
               <Label
                 placeholder="Loan Term"
                 inputVal={annualTerm}
                 setInputVal={setAnnualTerm}
+                icon="Yearly"
               />
 
               <Button
@@ -107,16 +95,17 @@ export default function App() {
               />
             </form>
           </div>
-
-          {error && <Error error={error} />}
-          {monthlyPayment <= 0 && !error && <Placeholder />}
-          {monthlyPayment > 0 && !error && (
-            <Results
-              monthlyPayment={monthlyPayment}
-              totalPayment={totalPayment}
-              totalInterestPaid={totalInterestPaid}
-            />
-          )}
+          <div className="flex justify-center mt-1 p-4 sm:basis-1/2">
+            {error && <Error error={error} />}
+            {monthlyPayment <= 0 && !error && <Placeholder />}
+            {monthlyPayment > 0 && !error && (
+              <Results
+                monthlyPayment={numberWithCommas(monthlyPayment)}
+                totalPayment={numberWithCommas(totalPayment)}
+                totalInterestPaid={numberWithCommas(totalInterestPaid)}
+              />
+            )}
+          </div>
         </div>
         <Background />
       </div>

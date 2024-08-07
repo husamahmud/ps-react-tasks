@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 function Results({ monthlyPayment, totalPayment, totalInterestPaid }) {
   return (
-    <div className="w-1/2 space-y-5 py-3 px-4 pl-10">
+    <div className="w-full font-medium divide-y-2 divide-dashed">
       <div className="span-container">
         <span className="span">Monthly payment</span>
         <span className="span deco">{monthlyPayment} $</span>

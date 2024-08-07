@@ -1,16 +1,18 @@
-function Label({ placeholder, inputVal, setInputVal }) {
+/* eslint-disable react/prop-types */
+function Label({ placeholder, inputVal, setInputVal, icon }) {
   return (
-    <label className="relative block">
-      <span className="absolute inset-y-0 right-0 flex items-center pr-4 text-stone-500">
-        $
-      </span>
+    <label className="relative h-10">
       <input
-        className="rounded-md py-2 px-4 focus:outline-none focus:outline-green-500"
+        className="bg-stone-300 w-3/4 h-full pl-2 rounded-l-md"
         type="text"
         placeholder={placeholder}
         value={inputVal}
         onChange={(e) => setInputVal(e.target.value)}
       />
+
+      <span className="absolute top-0 right-0 flex justify-center items-center w-1/4 h-full bg-stone-400 rounded-r-md">
+        {icon}
+      </span>
     </label>
   );
 }
