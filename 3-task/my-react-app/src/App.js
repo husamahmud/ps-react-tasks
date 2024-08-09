@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 
 const programmingData = [
@@ -23,30 +24,32 @@ const programmingData = [
   },
 ];
 
-
 function App() {
+  const [activeTab, setActiveTab] = useState(0);
 
   return (
     <>
-    <div className="main__container">
-      <div className="tab__header">
-    {programmingData.map((item, index) => (
-        <li className="tab__button active" key= {index}>
-          {item.Type}
-        </li>
-      ))}
-      </div>
-      <div className="tab__container">
-        <div className="tab__content">
-          {programmingData.map((data, index) => (
-            <div key={index}>
-              <p>{data.Data}</p>
-            </div>
-          ))}
+      <div className="main__container">
+        <div className="tab__header">
+        
+            {programmingData.map((item, index) => (
+              <li
+                className={`tab__button ${activeTab === index ? 'active' : ''}`}
+                key={index}
+                onClick={() => setActiveTab(index)}
+              >
+                {item.Type}
+              </li>
+            ))}
+        
+        </div>
+        <div className="tab__container">
+          <div className="tab__content">
+            <p>{programmingData[activeTab].Data}</p>
+          </div>
         </div>
       </div>
-    </div>
-  </>
+    </>
   );
 }
 
