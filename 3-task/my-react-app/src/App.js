@@ -1,24 +1,52 @@
-import logo from './logo.svg';
 import './App.css';
 
+const programmingData = [
+  {
+    Type: "Html",
+    Data: "HTML stands for Hyper Text Markup Language HTML is the standard markup language for creating Web pages",
+  
+  },
+  {
+    Type: "CSS",
+    Data: "CSS is the language we use to style an HTML document.",
+    
+  },
+  {
+    Type: "JavaScript",
+    Data: "You never know js ",
+    
+  },
+  {
+    Type: "Reactjs",
+    Data: "library not framework.",
+  
+  },
+];
+
+
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className="main__container">
+      <div className="tab__header">
+    {programmingData.map((item, index) => (
+        <li className="tab__button active" key= {index}>
+          {item.Type}
+        </li>
+      ))}
+      </div>
+      <div className="tab__container">
+        <div className="tab__content">
+          {programmingData.map((data, index) => (
+            <div key={index}>
+              <p>{data.Data}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
+  </>
   );
 }
 
