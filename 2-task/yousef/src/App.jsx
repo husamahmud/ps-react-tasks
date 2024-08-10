@@ -1,5 +1,5 @@
 import React from "react";
-import MortgageCalculator from "./MortgageCalculator";
+import MortgageCalculator from "./MortgageCalculator.jsx";
 
 function App() {
   return (

@@ -1,6 +1,8 @@
 ### Task 1: [Implement Holy Grail layout using CSS](1-task%2FREADME.md)
 
-### Task2: [Implement Mortage Calculator using React](2-task%2FREADME.md)
+### Task 2: [Implement Mortage Calculator using React](2-task%2FREADME.md)
+
+### Task 3: [Implement Tabs using React](3-task%2FREADME.md)
 
 ### How to submit your solution?
 
