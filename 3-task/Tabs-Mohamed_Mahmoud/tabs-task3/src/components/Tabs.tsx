@@ -17,7 +17,7 @@ interface ITabsProps {
 function Tabs({tabs} : ITabsProps) {
 
 
-    const [activeTab , setActiveTab] = useState<number>(3);
+    const [activeTab , setActiveTab] = useState<number>(1);
 
     return (
         <div className="container bg-[#dfe6ed] rounded-[48px] border-[16px] border-solid border-[#ebf0f4] overflow-hidden shadow-[16px_16px_48px_#7d828a30] h-[80%]">
