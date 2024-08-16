@@ -4,6 +4,8 @@
 
 ### Task 3: [Implement Tabs using React](3-task%2FREADME.md)
 
+### Task 4: [Implement Tic Tac Toe game using React](4-task%2FREADME.md)
+
 ### How to submit your solution?
 
 1. Clone this repository
