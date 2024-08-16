@@ -1,4 +1,4 @@
-import Tabs from "./components/Taps";
+import Tabs from "./components/Taps.jsx";
 
 function App() {
   return (
