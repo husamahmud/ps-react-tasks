@@ -48,4 +48,8 @@ input:focus .loan-amount-input {
   .right-part {
     width: 100%;
   }
+
+  .title {
+    gap: 4rem;
+  }
 }

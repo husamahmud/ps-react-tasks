@@ -145,8 +145,8 @@ function MortageCalc() {
             {/* start left part */}
             <div className="left-part bg-white p-10 h-[100%] text-[#122f3f]">
                 {/* form title */}
-                <div className="title flex items-center justify-between gap-40 mb-8">
-                    <h1 className='text-3xl font-bold basis-[calc(100%-120px)]'>
+                <div className="title flex items-center justify-between gap-44 mb-8">
+                    <h1 className='text-3xl font-bold basis-[calc(100%-276px)]'>
                         Mortgage Calculator
                     </h1>
                     <button onClick={clearAll} className='w-[100px] opacity-[.7] hover:opacity-[1] transition-all clear-all capitalize relative after:absolute after:bottom-[-2px] after:left-[50%] after:translate-x-[-50%] after:h-[1px] after:transition-all after:bg-[#122f3f] after:w-0 hover:after:w-[100%]'>
@@ -266,7 +266,6 @@ function MortageCalc() {
                             </div>
                         </>
                     }
-                    
                 </div>
             </div>
         </div>
