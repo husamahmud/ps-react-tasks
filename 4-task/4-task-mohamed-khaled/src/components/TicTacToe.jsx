@@ -3,6 +3,13 @@ import Board from "./Board";
 import GameOver from "./GameOver";
 import GameState from "./GameState";
 import Reset from "./Reset";
+import GameOverSound from "../Sounds/GameOverSound.wav";
+import ClickSound from "../Sounds/ClickSound.wav";
+
+const gameOverSound = new Audio(GameOverSound);
+gameOverSound.volume = 0.2;
+const clickSound = new Audio(ClickSound);
+clickSound.volume = 0.5;
 
 const PLAYER_X = "X";
 const PLAYER_O = "O";
@@ -77,6 +84,20 @@ function TicTacToe() {
     checkWinner(tiles, setStrikeClass, setGameState);
   }, [tiles]);
 
+  // play sound on when i press not in the load of thhe board
+
+  useEffect(() => {
+    if (tiles.some((tile) => tile !== null)) {
+      clickSound.play();
+    }
+  }, [tiles]);
+  // game over sound
+
+  useEffect(() => {
+    if (gameState !== GameState.inProgress) {
+      gameOverSound.play();
+    }
+  }, [gameState]);
   return (
     <>
       <h1>TicTacToe</h1>
