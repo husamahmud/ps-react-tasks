@@ -4,9 +4,9 @@
 
 This is a simple implementation of the classic Tic Tac Toe game. The game can be played between two players on a 3x3 grid, where the objective is to align three of your symbols (X or O) in a row, column, or diagonal.
 
-![Tic Tac Toe Game Screenshot](images/Web-App.png)
+![Tic Tac Toe Game Screenshot](./src/images/Web-App.png)
 
-![Tic Tac Toe Game Full Responsive](images/Full-Responsive.png)
+![Tic Tac Toe Game Full Responsive](./src/images/Full-Redponsive.png)
 
 ## Installation
 
