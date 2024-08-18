@@ -35,6 +35,7 @@ function App() {
       if(oWins) {
         setShowpop(true);
         setWinnerMessage("player o is the");
+        return;
       }
 
       // handle draw-----
@@ -46,6 +47,12 @@ function App() {
       }
     });
   };
+
+
+  const reset = () => {
+    setBoxes(["" , "" , "", "" , "" , "" , "" , "" , ""]);
+    setPlayer("x");
+  }
 
 
   // check every time when the boxs changes
@@ -69,7 +76,7 @@ function App() {
                 <span className="ml-4 text-[25px] font-bold">Turn</span>
             </div>
 
-            <button type='button' className="reset bg-[#a8bec9] text-[#374d58] w-[50px] h-[50px] text-[30px] font-bold cursor-pointer rounded-[15px] shadow-[0_5px_0_0_#6c8997] transition duration-400 ease-in-out active:translate-y-[5px]">
+            <button onClick={reset} type='button' className="reset bg-[#a8bec9] text-[#374d58] w-[50px] h-[50px] text-[30px] font-bold cursor-pointer rounded-[15px] shadow-[0_5px_0_0_#6c8997] transition duration-400 ease-in-out active:translate-y-[5px]">
                 &#8635;
             </button>
         </div>
@@ -84,7 +91,8 @@ function App() {
       </div>
 
       {/* winner message */}
-      {showpop && <WinnerPopUp showpop = {showpop} winnerMessage = {winnerMessage}/>}
+      {showpop && <WinnerPopUp showpop = {showpop} setShowpop = {setShowpop} reset ={reset}
+      winnerMessage = {winnerMessage}/>}
     </div>
   )
 }
