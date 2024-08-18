@@ -1,5 +1,7 @@
 body {
-  background-color: #000;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.801), rgba(0, 0, 0, 0.822)),
+    url("../images/pattern.jpg");
+  background-size: cover;
   font-family: mainly;
   color: white;
   display: flex;
