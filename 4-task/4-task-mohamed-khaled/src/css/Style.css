@@ -1,13 +1,16 @@
 body {
+  background-color: #000;
+  font-family: mainly;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #23272f;
-  color: white;
 }
 
 h1 {
   text-align: center;
+  font-size: 3em;
+  color: #fff078;
 }
 
 .board {
@@ -27,26 +30,28 @@ h1 {
 }
 
 .right-border {
-  border-right: 0.2em solid #0074a6;
+  border-right: 0.5em solid #e90074;
 }
 
 .bottom-border {
-  border-bottom: 0.2em solid #0074a6;
+  border-bottom: 0.5em solid #e90074;
 }
 
 .x-hover:hover::after {
   content: "X";
   opacity: 0.4;
+  color: white;
 }
 
 .o-hover:hover::after {
   content: "O";
   opacity: 0.4;
+  color: white;
 }
 
 .strike {
   position: absolute;
-  background-color: darkorange;
+  background-color: #fff078;
 }
 
 .strike-row-1 {
@@ -96,7 +101,7 @@ h1 {
 
 .game-over {
   text-align: center;
-  border: #5468ff 8px;
+  border: #ff4191 8px;
   border-style: dotted;
   padding: 10px;
   margin-top: 50px;
@@ -104,10 +109,16 @@ h1 {
 }
 
 .reset-button {
+  font-family: mainly;
   margin-top: 50px;
   padding: 20px;
-  background-color: #0074a6;
-  color: white;
+  background-color: #fff078;
+  color: #000000;
   width: 100%;
   font-size: 1.5em;
+}
+
+@font-face {
+  font-family: "mainly";
+  src: url(../Milany-Regular.otf);
 }

@@ -99,17 +99,19 @@ function TicTacToe() {
     }
   }, [gameState]);
   return (
-    <>
-      <h1>TicTacToe</h1>
-      <Board
-        strikeClass={strikeClass}
-        playerTurn={playerTurn}
-        tiles={tiles}
-        onTileClick={handleTileClick}
-      />
-      <GameOver gameState={gameState} />
-      <Reset gameState={gameState} onReset={handleReset} />
-    </>
+    <div className="container">
+      <div className="warpper">
+        <h1 className="heading-primary">Tic Tac Toe</h1>
+        <Board
+          strikeClass={strikeClass}
+          playerTurn={playerTurn}
+          tiles={tiles}
+          onTileClick={handleTileClick}
+        />
+        <GameOver gameState={gameState} />
+        <Reset gameState={gameState} onReset={handleReset} />
+      </div>
+    </div>
   );
 }
 
