@@ -8,6 +8,7 @@ const initState = {
   newGame: false,
   player: 'X',
   winner: null,
+  raw: 0,
 };
 
 const xoReducer = createSlice({
@@ -34,6 +35,13 @@ const xoReducer = createSlice({
     handleWinner(state, action) {
       state.winner = action.payload;
       state.newGame = false;
+      state.raw = 0;
+    },
+    handleRaw(state, action) {
+      if (state.raw == 9) {
+        state.newGame = false;
+      }
+      state.raw = state.raw + 1;
     },
   },
 });
@@ -44,5 +52,6 @@ const store = configureStore({
   },
 });
 
-export const { startNewGame, handleRound, handleWinner } = xoReducer.actions;
+export const { startNewGame, handleRound, handleWinner, handleRaw } =
+  xoReducer.actions;
 export default store;

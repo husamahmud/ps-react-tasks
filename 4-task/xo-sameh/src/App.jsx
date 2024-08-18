@@ -1,25 +1,23 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { startNewGame, handleRound, handleWinner } from './store';
+import { startNewGame, handleRound, handleWinner, handleRaw } from './store';
 import { checkWinner } from './utils';
 
-// sorry for choosing bad colors
-
-const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+// sorry for bad colors
 
 export default function App() {
-  // const [values, setValues] = useState(numbers);
-  // const [newGame, setNewGame] = useState(false);
-  // const [player, setPlayer] = useState('X');
-  // const [winner, setWinner] = useState(null);
-
   const dispatch = useDispatch();
-  const { values, newGame, player, winner } = useSelector((store) => store.xo);
+  const { values, newGame, player, winner, raw } = useSelector(
+    (store) => store.xo
+  );
 
   useEffect(() => {
     let winnerWinner = checkWinner(values);
     winnerWinner && dispatch(handleWinner(winnerWinner));
+    return () => {
+      dispatch(handleRaw());
+    };
   }, [values, dispatch]);
 
   const xoStyles = (val) => {
@@ -34,6 +32,8 @@ export default function App() {
     }
     return styles;
   };
+
+  console.log(raw);
 
   return (
     <div className="App">
@@ -56,6 +56,7 @@ export default function App() {
 
       {newGame && <p className="player">Player {player}</p>}
       {winner && <p className="player">Player {winner} is winner</p>}
+      {!winner && raw == 10 && <p>Raw</p>}
 
       {!newGame && !winner && (
         <button className="controller" onClick={() => dispatch(startNewGame())}>
@@ -72,7 +73,7 @@ export default function App() {
         </button>
       )}
 
-      {winner && (
+      {(winner || raw == 9) && (
         <button className="controller" onClick={() => dispatch(startNewGame())}>
           Play Again
         </button>
