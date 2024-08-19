@@ -7,5 +7,5 @@
   box-sizing: border-box;
 }
 :root {
-  --mainBtnColor: rgb(97, 9, 97);
+  --activeColor: rgb(97, 9, 97);
 }
