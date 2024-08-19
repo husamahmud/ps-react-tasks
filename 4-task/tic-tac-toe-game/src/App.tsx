@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import Box from "./components/Box";
 import WinnerPopUp from "./components/WinnerPopUp";
 import ScoreBoxes from "./components/ScoreBoxes";
-
+import winnerSound from "./assets/winning-218995.mp3";
+import drawSound from "./assets/violin-lose-4-185125.mp3";
 
 
 
@@ -32,7 +33,13 @@ function App() {
 
       const xWins = possibleBox.every(box => boxs[box] === "x");
       if(xWins) {
+        // play the winnerSound
+        const winnerSoundEffect = new Audio(winnerSound);
+        winnerSoundEffect.play();
+
+        // show WinnerPopUp
         setShowpop(true);
+        // change the winnerMessage
         setWinnerMessage("player x is the");
         // update the scoreBoxes----
         updateScoreBoxes("x score");
@@ -41,7 +48,13 @@ function App() {
 
       const oWins = possibleBox.every(box => boxs[box] === "o");
       if(oWins) {
+        // play the winnerSound
+        const winnerSoundEffect = new Audio(winnerSound);
+        winnerSoundEffect.play();
+
+        // show WinnerPopUp
         setShowpop(true);
+        // change the winnerMessage
         setWinnerMessage("player o is the");
         // update the scoreBoxes----
         updateScoreBoxes("o score");
@@ -50,9 +63,14 @@ function App() {
 
       // handle draw-----
       const allBoxesNotEmpty = boxs.every(box => box !== "");
-      
       if(!(xWins && oWins) && allBoxesNotEmpty) {
+        // play the drawSound
+        const drawSoundEffect = new Audio(drawSound);
+        drawSoundEffect.play();
+        
+        // show WinnerPopUp
         setShowpop(true);
+        // change the winnerMessage
         setWinnerMessage("no player won");
         // update the scoreBoxes----
         updateScoreBoxes("draw");

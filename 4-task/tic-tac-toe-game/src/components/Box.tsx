@@ -1,4 +1,5 @@
 import React from 'react';
+import clickSound from "../assets/click-for-game-menu-131903.mp3";
 
 interface IBoxProps {
     box : string;
@@ -14,6 +15,11 @@ interface IBoxProps {
 function Box({box  , id, boxes , setBoxes , player , setPlayer} : IBoxProps) {
 
     const handleClick = (e : React.MouseEvent<HTMLDivElement>) => {
+        // play the click sound---
+        const clickBox = new Audio(clickSound);
+        clickBox.play();
+
+        // get the targetBox
         const targetBox : number = +e.currentTarget.id;
 
         // check if the box contain x or o----
