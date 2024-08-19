@@ -28,7 +28,11 @@ function WinnerPopUp({showpop , winnerMessage , setShowpop , reset} : IWinnerPop
             <div className={`message bg-[#192a32] w-full flex flex-col items-center p-[2rem_1rem]
             ${messageAnimate ? "translate-x-[0]" : "translate-x-[-100%]"}`}>
                 <h1 className='text-white text-[3rem] mb-[2rem] capitalize select-none'>{winnerMessage}</h1>
-                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHJ0eHBkM2RuYXhjdDRpaTAxMGdjeHkxNWxoYml3cTNiM3BseTJ6aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ljVVmnTyiPjEcqvUfF/giphy.webp" alt="winner-gif" />
+                <img src={winnerMessage !== "no player won" ? "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHJ0eHBkM2RuYXhjdDRpaTAxMGdjeHkxNWxoYml3cTNiM3BseTJ6aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ljVVmnTyiPjEcqvUfF/giphy.webp"
+                    : "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWV0cGR6eWNoNHZzbHAweWtmdTRkNnJicWsyeHcxaXR1YXE1MGQyYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26Ffi42TZbsrwDwzu/giphy.webp"
+                } 
+                    alt="winner-gif" 
+                />
             </div>
         </div>
     )

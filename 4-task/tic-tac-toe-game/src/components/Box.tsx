@@ -31,7 +31,7 @@ function Box({box  , id, boxes , setBoxes , player , setPlayer} : IBoxProps) {
     }
     
     return (
-        <div id={`${id}`} className='box select-none w-[calc((100%-40px)/3)] min-h-[100px] bg-[#1f3540] rounded-[12px] shadow-[0px_6px_0_0_#102129] flex justify-center items-center'
+        <div id={`${id}`} className='select-none w-[calc((100%-40px)/3)] min-h-[100px] bg-[#1f3540] rounded-[12px] shadow-[0px_6px_0_0_#102129] flex justify-center items-center'
             onClick={handleClick}
         >
             <span className={`scale-[4] ${box === "x" ? "text-[#31c4be]" : "text-[#f2b237]"}`}>{box}</span>
