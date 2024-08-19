@@ -1,7 +1,11 @@
+/* gloabl css rules  */
 *,
 *::after,
 *::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+:root {
+  --mainBtnColor: rgb(97, 9, 97);
 }
