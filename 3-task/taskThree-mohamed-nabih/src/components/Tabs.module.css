@@ -1,0 +1,81 @@
+nav {
+    width: 100%;
+    padding: 10px 30px;
+    background-color: #914F1E;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.tabBtn {
+    flex: 0 1 17%;
+    font-size: 1rem;
+    transition: .4s;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border: 2px solid transparent;
+}
+
+.tabBtn:hover {
+    background-color: bisque;
+}
+
+.tabBtn.active {
+    background-color: rgb(204, 112, 0);
+
+}
+
+.tabBtn.active,
+.tabBtn:hover {
+    flex-grow: 1;
+    border: 2px solid white;
+}
+
+main {
+    margin: 10px auto;
+    background-color: rgba(240, 248, 255, 0.59);
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    padding: 20px 30px;
+    gap: 30px;
+}
+
+main h1 {
+    font-size: 2rem;
+}
+
+small {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+
+@media screen and (max-width: 600px) {
+    main h1 {
+        font-size: 1.1rem;
+    }
+
+    main h2 {
+        font-size: 1rem;
+    }
+
+    main h3 {
+        font-size: .8rem;
+    }
+
+    main {
+        text-align: center;
+    }
+
+}
