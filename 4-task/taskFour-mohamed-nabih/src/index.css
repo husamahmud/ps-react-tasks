@@ -1,0 +1,211 @@
+/* src/index.css */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  ;
+}
+
+.root {
+  width: 100%;
+}
+
+body {
+  height: 100vh;
+  background-color: #111010;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+ol {
+  padding: 10px;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  border: 1px solid black;
+  height: 100%;
+}
+
+ol>li {
+  width: 100%;
+}
+
+ol>li>button {
+  border: none;
+  background-color: #e31957;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: .2s;
+}
+
+ol>li>button:hover {
+  background-color: #b40c3e;
+}
+
+.board-row {
+  width: 320px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  min-width: calc(100% /3);
+  height: 100%;
+  outline: none;
+  font-size: 40px;
+  font-weight: bold;
+  border: 1px solid #090126;
+  padding: 5px;
+  transition: .3s;
+}
+
+.square:hover {
+  background-color: #ffffff21;
+  cursor: pointer;
+  outline: none;
+}
+
+
+
+
+
+
+.game {
+  width: 100%;
+  min-height: 95vh;
+  display: flex;
+  gap: 30px;
+  background-color: #d4d2d8;
+  padding: 5px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-info {
+  margin-left: 20px;
+  border: 2px solid black;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-radius: inherit;
+
+}
+
+.game-info>div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid black;
+
+}
+
+button.active {
+  background-color: black
+}
+
+/* CSS */
+.button-setting {
+  box-shadow: 0px 15px 20px rgba(3, 12, 8, 0.4);
+  appearance: button;
+  background-color: #d61841;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.button-setting:after {
+  background-clip: padding-box;
+  background-color: #f61c48;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-setting:main,
+.button-setting:focus {
+  user-select: auto;
+}
+
+.button-setting:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.button-setting:disabled {
+  cursor: auto;
+}
+
+.button-setting:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+
+
+.restart {
+  background-color: #1c57a4;
+}
+
+.restart:after {
+  background-color: #034397;
+  ;
+}
+
+
+.square.winning {
+  background-color: #ffff00;
+  color: #000;
+}
