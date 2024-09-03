@@ -43,15 +43,15 @@ function MortageCalc() {
       totalPayment: totalPayment.toFixed(2),
       totalInterest: totalInterest.toFixed(2),
     });
-
-    console.log("Loan Amount:", P);
-    console.log("Interest Rate:", r);
-    console.log("Loan Term (in months):", n);
-    console.log("Monthly Payment:", monthlyPayment.toFixed(2));
-    console.log("Total Payment:", totalPayment.toFixed(2));
-    console.log("Total Interest:", totalInterest.toFixed(2));
+    clearForm()
   }
 
+  function clearForm () {
+    setLoanAmount("")
+    setInterestRate("")
+    setLoanTerm("")
+  
+  }
   return (
     <div className='main-div container flex h-[90vh] items-center justify-between rounded-2xl overflow-hidden'>
       <div className="left-part bg-white p-10 h-[100%] text-[#122f3f]">
@@ -59,7 +59,7 @@ function MortageCalc() {
           <h1 className='text-3xl font-bold basis-[calc(100%-276px)]'>
             Mortgage Calculator
           </h1>
-          <button className='w-[100px] opacity-[.7] hover:opacity-[1] transition-all clear-all capitalize relative after:absolute after:bottom-[-2px] after:left-[50%] after:translate-x-[-50%] after:h-[1px] after:transition-all after:bg-[#122f3f] after:w-0 hover:after:w-[100%]'>
+          <button className='w-[100px] opacity-[.7] hover:opacity-[1] transition-all clear-all capitalize relative after:absolute after:bottom-[-2px] after:left-[50%] after:translate-x-[-50%] after:h-[1px] after:transition-all after:bg-[#122f3f] after:w-0 hover:after:w-[100%]' onClick={clearForm}>
             clear all
           </button>
         </div>
