@@ -3,6 +3,7 @@ import { AiOutlinePercentage } from 'react-icons/ai';
 import { BsCurrencyDollar } from 'react-icons/bs';
 import { FaCalculator } from 'react-icons/fa';
 
+
 function MortageCalc() {
   const [loanAmount, setLoanAmount] = useState("");
   const [interestRate, setInterestRate] = useState("");
