@@ -9,6 +9,7 @@ function MortageCalc() {
   const [interestRate, setInterestRate] = useState("");
   const [loanTerm, setLoanTerm] = useState("");
   const [result, setResult] = useState(null);
+  const [errors, setErrors] = useState({});
 
   const handleLoanAmountChange = (e) => {
     const { name, value } = e.target;
@@ -27,8 +28,26 @@ function MortageCalc() {
     }
   };
 
+  const validateForm = () => {
+    const newErrors = {};
+    if (!loanAmount || isNaN(loanAmount) || parseFloat(loanAmount) <= 0) {
+      newErrors.loanAmount = "Please enter a valid loan amount";
+    }
+    if (!interestRate || isNaN(interestRate) || parseFloat(interestRate) <= 0) {
+      newErrors.interestRate = "Please enter a valid interest rate";
+    }
+    if (!loanTerm || isNaN(loanTerm) || parseFloat(loanTerm) <= 0) {
+      newErrors.loanTerm = "Please enter a valid loan term";
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+
+
   function Calculation(e) {
     e.preventDefault();
+    if (!validateForm()) return;
 
     const P = parseFloat(loanAmount);
     const r = parseFloat(interestRate) / 100 / 12;
@@ -81,6 +100,9 @@ function MortageCalc() {
                 onChange={handleLoanAmountChange}
               />
             </div>
+               <div className="h-5 text-red-500 text-sm">
+                {errors.loanAmount}
+              </div>
           </label>
 
           <label htmlFor="interestRate" className='capitalize block text-lg'>
@@ -98,6 +120,9 @@ function MortageCalc() {
                 onChange={handleLoanAmountChange}
               />
             </div>
+               <div className="h-5 text-red-500 text-sm">
+                {errors.interestRate}
+              </div>
           </label>
 
           <label htmlFor="loanTerm" className='capitalize block text-lg'>
@@ -115,6 +140,9 @@ function MortageCalc() {
                 onChange={handleLoanAmountChange}
               />
             </div>
+               <div className="h-5 text-red-500 text-sm">
+                {errors.loanTerm}
+              </div>
           </label>
 
           <button className='bg-[#d7da2fa9] rounded-3xl flex items-center justify-center p-3 gap-3 font-bold w-[50%] transition-all hover:bg-[#d7da2f]' type="submit">
