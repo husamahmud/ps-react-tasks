@@ -1,0 +1,42 @@
+You can customize which elements can become draggable, the type of feedback the draggable elements produce, and the droppable elements.
+
+Event types
+drag
+This event is fired when an element or text selection is being dragged.
+
+dragend
+This event is fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).
+
+dragenter
+This event is fired when a dragged element or text selection enters a valid drop target.
+
+dragleave
+This event is fired when a dragged element or text selection leaves a valid drop target.
+
+dragover
+This event is fired continuously when an element or text selection is being dragged and the mouse pointer is over a valid drop target (every 50 ms WHEN mouse is not moving ELSE much faster between 5 ms (slow movement) and 1ms (fast movement) approximately. This firing pattern is different than mouseover ).
+
+dragstart
+This event is fired when the user starts dragging an element or text selection.
+
+drop
+This event is fired when an element or text selection is dropped on a valid drop target.
+
+Identify what is draggable <img draggable="false">
+
+install the Drag and Drop for React package
+
+wrap the component with DndProvider
+
+make the knight draggable
+
+Make the Board Squares Droppable
+
+isOver: !!monitor.isOver()
+
+canDrop: !!monitor.canDrop()
+
+Add a Drag Preview Image
+
+
+dataTransfer with drag drop
