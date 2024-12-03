@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  height: 15em;
+  margin: 30px auto;
+  position: relative;
+  max-width: 25%;
+}
+
+.game {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: beige;
+  padding: 10px;
+}
+
+.game button {
+  background-color: bisque;
+  padding: 10px;
+  color: grey;
+  border: 2px solid rgb(206, 204, 204);
+  font-size: larger;
+}
+
+.player {
+  margin-top: 12px;
+}
+
+.controller {
+  display: inline-block;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0px;
+  padding: 5px;
+}
+
+.active {
+  background-color: rgb(219, 219, 159);
+}

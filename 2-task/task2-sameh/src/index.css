@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* .span {
+    @apply font-semibold text-stone-800 dark:text-white capitalize;
+  }
+  */
+  .deco {
+    @apply text-green-500;
+  }
+
+  .span-container {
+    @apply flex justify-between capitalize text-xl py-2;
+  }
+}
+
+/* CSS Notes */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  padding: 1 2rem;
+  max-width: 20rem;
+}
+
+header {
+  min-height: 300px;
+}
